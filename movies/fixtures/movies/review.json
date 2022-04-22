@@ -1,0 +1,182 @@
+[
+{
+    "model": "movies.review",
+    "pk": 12,
+    "fields": {
+        "movie": 3,
+        "title": "오징어게임 잔인하다",
+        "content": "머리 터질때 깜짝놀람 ㅋㅋ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 13,
+    "fields": {
+        "movie": 1,
+        "title": "더킹은 진짜 재밌다",
+        "content": "조인성 너무 멋있고 조인성도 멋있음 ㅎ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 14,
+    "fields": {
+        "movie": 2,
+        "title": "놈놈놈",
+        "content": "옛날에 봤는데 이병헌 멋있음"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 15,
+    "fields": {
+        "movie": 4,
+        "title": "신과함께",
+        "content": "주호민 람보르기니 부럽다 ㅎ.ㅎ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 16,
+    "fields": {
+        "movie": 5,
+        "title": "암살",
+        "content": "해방될지 몰랐으니까~~"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 17,
+    "fields": {
+        "movie": 9,
+        "title": "넘 잔인함",
+        "content": "진짜 치킨 먹으면서 봤는데 치킨이 안넘어감 ㅠ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 18,
+    "fields": {
+        "movie": 10,
+        "title": "신세계",
+        "content": "신세계는 진짜 한국영화중 최고다"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 19,
+    "fields": {
+        "movie": 10,
+        "title": "황정민",
+        "content": "존잘 ㅋ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 20,
+    "fields": {
+        "movie": 3,
+        "title": "오징어게임",
+        "content": "또봐야징"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 21,
+    "fields": {
+        "movie": 7,
+        "title": "기생충",
+        "content": "진짜 재밌따"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 22,
+    "fields": {
+        "movie": 6,
+        "title": "괴물",
+        "content": "한강에 맥주 던질때까지는 다 죽을지 몰랐지~~"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 23,
+    "fields": {
+        "movie": 8,
+        "title": "이선균 개간지남",
+        "content": "흑ㅎ그"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 24,
+    "fields": {
+        "movie": 9,
+        "title": "악마를 보았따",
+        "content": "처음에 최민식 안죽어서 이게 뭐지 했는데 진짜 반전 ㅇ베ㅏ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 25,
+    "fields": {
+        "movie": 10,
+        "title": "이정재너무 불쌍하다 ㅋ",
+        "content": "최민식 나쁘다"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 26,
+    "fields": {
+        "movie": 1,
+        "title": "류준열이 진짜 멋있따",
+        "content": "ㅋㅋ남자가봐도"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 27,
+    "fields": {
+        "movie": 5,
+        "title": "암살",
+        "content": "슈슈ㅠ쓔ㅠㅠㄱ"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 28,
+    "fields": {
+        "movie": 4,
+        "title": "신과함께",
+        "content": "이게 1임 2임 ?"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 29,
+    "fields": {
+        "movie": 7,
+        "title": "너는 다",
+        "content": "계획이 있구나?"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 30,
+    "fields": {
+        "movie": 6,
+        "title": "활쏘는사람",
+        "content": "이름뭐지"
+    }
+},
+{
+    "model": "movies.review",
+    "pk": 31,
+    "fields": {
+        "movie": 3,
+        "title": "오징어게임",
+        "content": "ㅋㅋ 나도 오징언데 참가 가능?"
+    }
+}
+]
