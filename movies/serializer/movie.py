@@ -1,4 +1,4 @@
-from ..models import Movie,Actor
+from ..models import Movie,Actor,Review
 from rest_framework import serializers
 
 
@@ -20,11 +20,18 @@ class dumyActorlistSerializer(serializers.ModelSerializer) :
 
     class Meta :
         model = Actor
-        fields = '__all__'
+        fields = ('name',)
+
+class dumyReviewSerializer(serializers.ModelSerializer) :
+    class Meta :
+        model = Review 
+        fields = ('title','content')
+        read_only_fields = ('movie',)
 
 class MovieSerializer(serializers.ModelSerializer) :
-    review_set = serializers.PrimaryKeyRelatedField(many=True,read_only=True)
+    review_set = dumyReviewSerializer(many=True,read_only=True)
+    # reviews = Review.objects.get(pk=review_set)
     actors = dumyActorlistSerializer(read_only=True, many=True)
     class Meta :
         model = Movie
-        fields = ('title','review_set','actors')
+        fields = ('title','actors','review_set',)
