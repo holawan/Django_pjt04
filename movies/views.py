@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializer.actor import ActorlistSerializer,ActorSerializer
 # Create your views here.
-
+from rest_framework import status
 @api_view(['GET'])
 def actor_list(request) :
     actors = get_list_or_404(Actor)
@@ -47,9 +47,20 @@ def review_list(request) :
 
     return Response(serializer.data)
 
-@api_view(['GET'])
+@api_view(['GET','PUT'])
 def review_detail(request,review_pk) :
     review = get_object_or_404(Review,pk=review_pk)
-    serializer = Reviewserializer(review)
+    if request.method == 'GET' : 
+        review = get_object_or_404(Review,pk=review_pk)
+        serializer = Reviewserializer(review)
 
-    return Response(serializer.data)
+        return Response(serializer.data)
+    
+    elif request.method == 'PUT' :
+        serializer = Reviewserializer(review,data=request.data)
+        if serializer.is_valid(raise_exception=True) :
+            serializer.save()
+            return Response(serializer.data)
+    
+
+
