@@ -47,7 +47,7 @@ def review_list(request) :
 
     return Response(serializer.data)
 
-@api_view(['GET','PUT'])
+@api_view(['GET','PUT','DELETE'])
 def review_detail(request,review_pk) :
     review = get_object_or_404(Review,pk=review_pk)
     if request.method == 'GET' : 
@@ -62,5 +62,10 @@ def review_detail(request,review_pk) :
             serializer.save()
             return Response(serializer.data)
     
-
+    elif request.method == "DELETE" :
+        review.delete()
+        data = {
+            'delete' : f'{review_pk}번 리뷰가 삭제되었습니다.'
+        }
+        return Response(data,status=status.HTTP_204_NO_CONTENT)
 
