@@ -1,6 +1,7 @@
 from django.shortcuts import get_list_or_404,get_object_or_404
 
 from movies.serializer.movie import  MovielistSerializer,MovieSerializer
+from movies.serializer.review import ReviewListserializer
 from .models import Actor,Movie,Review
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -36,5 +37,12 @@ def movie_list(request) :
 def movie_detail(request,movie_pk) :
     movie = get_object_or_404(Movie,pk = movie_pk)
     serializer = MovieSerializer(movie)
+
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def review_list(request) :
+    reviews = get_list_or_404(Review) 
+    serializer = ReviewListserializer(reviews,many=True)
 
     return Response(serializer.data)
