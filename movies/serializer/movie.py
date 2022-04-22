@@ -29,9 +29,9 @@ class dumyReviewSerializer(serializers.ModelSerializer) :
         read_only_fields = ('movie',)
 
 class MovieSerializer(serializers.ModelSerializer) :
+    actors = dumyActorlistSerializer(read_only=True, many=True)
     review_set = dumyReviewSerializer(many=True,read_only=True)
     # reviews = Review.objects.get(pk=review_set)
-    actors = dumyActorlistSerializer(read_only=True, many=True)
     class Meta :
         model = Movie
-        fields = ('title','actors','review_set',)
+        fields = '__all__'

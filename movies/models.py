@@ -15,7 +15,7 @@ class Movie(models.Model) :
     #줄거리 
     overview = models.TextField()
     #개봉일 
-    release_date = models.DateTimeField()
+    release_date = models.DateField()
     #포스터 주소 
     poster_path = models.TextField()
     actors = models.ManyToManyField(Actor,related_name='starring_movie')

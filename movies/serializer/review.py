@@ -17,11 +17,12 @@ class ReviewListserializer(serializers.ModelSerializer) :
         
 
 class Reviewserializer(serializers.ModelSerializer) :
-    class Meta :
-        model = Review
-        fields = '__all__'
-        read_only_fields = ('movie',)
     def to_representation(self, instance) :
         response = super().to_representation(instance)
         response['movie'] = dummyMovieserializer(instance.movie).data 
         return response
+
+    class Meta :
+        model = Review
+        fields = '__all__'
+        read_only_fields = ('movie',)
