@@ -9,3 +9,9 @@ class MovieActorserializer(serializers.ModelSerializer) :
         model = Movie
         fields = ('title',)
 
+class MovielistSerializer(serializers.ModelSerializer) :
+
+    class Meta :
+        model = Movie
+        fields = ('title','overview',)
+
